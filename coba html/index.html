@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Saya - Dzaky</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(135deg, #525e5b, #d6d6d6);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px; /* Dikurangi untuk HP */
+        }
+
+        .container {
+            max-width: 100%; /* Menggunakan lebar penuh di HP */
+            width: 700px; /* Tetap maksimal 700px di layar besar */
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px; /* Dikurangi untuk HP */
+            border-radius: 15px; /* Sedikit diperkecil */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 32px; /* Dikurangi sedikit */
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            width: 40px;
+            height: 3px;
+            background: #3498db;
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        p {
+            font-size: 16px; /* Ukuran font lebih kecil untuk HP */
+            color: #34495e;
+            line-height: 1.5;
+            margin: 10px 0;
+            transition: transform 0.3s ease;
+        }
+
+        p:hover {
+            transform: translateX(5px); /* Efek hover dikurangi di HP */
+        }
+
+        .highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .profile-pic {
+            width: 120px; /* Ukuran diperkecil untuk HP */
+            height: 120px;
+            border-radius: 50%;
+            margin: 15px auto;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: block; /* Ditambahkan untuk elemen img */
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.05); /* Efek hover lebih halus */
+        }
+
+        .social-links {
+            margin-top: 15px;
+            display: flex; /* Menggunakan flexbox */
+            flex-wrap: wrap; /* Membungkus jika sempit */
+            justify-content: center;
+            gap: 10px; /* Jarak antar tombol */
+        }
+
+        .social-links a {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            background: #4c4d4d;
+            padding: 6px 12px; /* Dikurangi untuk HP */
+            border-radius: 20px;
+            font-size: 14px; /* Ukuran font lebih kecil */
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #686868;
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Media Query untuk Layar Kecil */
+        @media (max-width: 600px) {
+            body {
+                padding: 5px;
+            }
+            .container {
+                padding: 15px;
+                margin: 0 10px; /* Margin samping agar tidak terlalu menempel */
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h1::after {
+                width: 30px;
+                bottom: -6px;
+            }
+            p {
+                font-size: 14px;
+            }
+            .profile-pic {
+                width: 100px;
+                height: 100px;
+            }
+            .social-links a {
+                padding: 5px 10px;
+                font-size: 12px;
+            }
+        }
+
+        /* Untuk layar sangat kecil (misalnya < 400px) */
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 13px;
+            }
+            .profile-pic {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="Images/gjls.jpeg" class="profile-pic" alt="Foto Profil Dzaky">
+        <h1>Tentang Saya</h1>
+        <p>Halo! Nama saya <span class="highlight">Tubagus Muchammad Dzaky Nashrullah Sutalaksana</span>. Saya berusia 18 tahun dan tinggal di <span class="highlight">Bandung, Indonesia</span>.</p>
+        <p>Saya suka <span class="highlight">menggambar, mendengarkan musik, belajar hal-hal baru, dan juga olahraga.</span></p>
+        <p>Pernahkah Anda mencoba membuat web? Ini adalah salah satu karya sederhana saya! <span class="highlight">anjai, ga?</span></p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/tb.dzk/" target="_blank">Instagram</a>
+            <a href="#">linkedIn</a>
+            <a href="#">GitHub</a>
+        </div>
+    </div>
+
+    <!-- Tambahkan font Poppins dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</body>
+</html>
